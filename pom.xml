@@ -1,0 +1,143 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mywebsite</groupId>
+  <artifactId>myWebsite</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>myWebsite Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <!-- 在使用IntelliJ IDEA 创建Maven项目时，默认的Java Language是1.5，
+  虽然可以在Project Structrue中修改，但是每次pom.xml文件有变化时，工程又会重置到1.5版本。
+  可以在pom.xml文件中加入以下配置解决此问题。其中的1.8根据实际情况配置-->
+  <properties>
+      <maven.compiler.source>1.8</maven.compiler.source>
+      <maven.compiler.target>1.8</maven.compiler.target>
+      <!-- 设置项目编码编码 -->
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+      <!-- spring版本号 -->
+      <spring.version>4.3.5.RELEASE</spring.version>
+      <!-- mybatis版本号 -->
+      <mybatis.version>3.4.1</mybatis.version>
+  </properties>
+  <dependencies>
+    <!-- jstl标签库-->
+    <!--<dependency>-->
+      <!--<groupId>javax.servlet.jsp.jstl</groupId>-->
+      <!--<artifactId>jstl-api</artifactId>-->
+      <!--<version>1.2</version>-->
+      <!--<exclusions>-->
+        <!--<exclusion>-->
+          <!--<groupId>javax.servlet</groupId>-->
+          <!--<artifactId>servlet-api</artifactId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<groupId>javax.servlet.jsp</groupId>-->
+          <!--<artifactId>jsp-api</artifactId>-->
+        <!--</exclusion>-->
+      <!--</exclusions>-->
+    <!--</dependency>-->
+
+    <!--<dependency>-->
+      <!--<groupId>org.glassfish.web</groupId>-->
+      <!--<artifactId>jstl-impl</artifactId>-->
+      <!--<version>1.2</version>-->
+      <!--<exclusions>-->
+        <!--<exclusion>-->
+          <!--<groupId>javax.servlet</groupId>-->
+          <!--<artifactId>servlet-api</artifactId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<groupId>javax.servlet.jsp</groupId>-->
+          <!--<artifactId>jsp-api</artifactId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<groupId>javax.servlet.jsp.jstl</groupId>-->
+          <!--<artifactId>jstl-api</artifactId>-->
+        <!--</exclusion>-->
+      <!--</exclusions>-->
+    <!--</dependency>-->
+      <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>javax.servlet-api</artifactId>
+          <version>3.1.0</version>
+      </dependency>
+
+      <dependency>
+          <groupId>taglibs</groupId>
+          <artifactId>standard</artifactId>
+          <version>1.1.2</version>
+      </dependency>
+    <!-- junit测试依赖-->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- spring核心依赖 -->
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-core</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-beans</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-context</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-jdbc</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-tx</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-web</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-webmvc</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-test</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+
+      <!-- 添加fastjson -->
+      <dependency>
+          <groupId>com.alibaba</groupId>
+          <artifactId>fastjson</artifactId>
+          <version>1.1.41</version>
+      </dependency>
+
+      <dependency>
+          <groupId>commons-fileupload</groupId>
+          <artifactId>commons-fileupload</artifactId>
+          <version>1.3.1</version>
+      </dependency>
+
+      <dependency>
+          <groupId>commons-io</groupId>
+          <artifactId>commons-io</artifactId>
+          <version>2.4</version>
+      </dependency>
+  </dependencies>
+  <build>
+    <finalName>myWebsite</finalName>
+  </build>
+</project>
