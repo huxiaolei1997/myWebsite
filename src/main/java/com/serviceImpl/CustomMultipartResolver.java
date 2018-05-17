@@ -1,4 +1,4 @@
-package com.Listener;
+package com.serviceImpl;
 
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUpload;
@@ -16,9 +16,9 @@ public class CustomMultipartResolver extends CommonsMultipartResolver  {
     @Autowired
     private FileUploadProgressListener fileUploadProgressListener;
 
-    public void setFileUploadProgressListener(FileUploadProgressListener fileUploadProgressListener){
-        this.fileUploadProgressListener=fileUploadProgressListener;
-    }
+//    public void setFileUploadProgressListener(FileUploadProgressListener fileUploadProgressListener){
+//        this.fileUploadProgressListener=fileUploadProgressListener;
+//    }
 
     @Override
     @SuppressWarnings("unchecked")

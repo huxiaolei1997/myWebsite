@@ -1,6 +1,7 @@
-package com.Listener;
+package com.serviceImpl;
 
 import com.model.Progress;
+import com.tools.Test;
 import org.apache.commons.fileupload.ProgressListener;
 import org.springframework.stereotype.Component;
 
@@ -23,7 +24,7 @@ public class FileUploadProgressListener implements ProgressListener {
         status.setpBytesRead(pBytesRead);
         status.setpContentLength(pContentLength);
         status.setpItems(pItems);
-        status.setpRate(pBytesRead / pContentLength);
+        status.setpRate(Test.div(pBytesRead * 100, pContentLength));
         System.out.println(status.toString());
     }
 }

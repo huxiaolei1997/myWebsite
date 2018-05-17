@@ -4,7 +4,7 @@ public class Progress {
     private long pBytesRead;
     private long pContentLength;
     private long pItems;
-    private float pRate;
+    private double pRate;
 
     public long getpBytesRead() {
         return pBytesRead;
@@ -30,11 +30,11 @@ public class Progress {
         this.pItems = pItems;
     }
 
-    public float getpRate() {
+    public double getpRate() {
         return pRate;
     }
 
-    public void setpRate(float pRate) {
+    public void setpRate(double pRate) {
         this.pRate = pRate;
     }
 

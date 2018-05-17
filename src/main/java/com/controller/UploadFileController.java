@@ -15,10 +15,12 @@ public class UploadFileController {
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public @ResponseBody  String uploadFile(@RequestParam(value = "file") MultipartFile... files) throws IOException {
+        int index = 0;
         for (MultipartFile f : files) {
             if (f.getSize() > 0) {
-                File targetFile = new File("D:\\myWebsite\\test.jpg");
+                File targetFile = new File("D:\\myWebsite\\" + index + ".jpg");
                 f.transferTo(targetFile);//写入目标文件
+                index++;
             }
         }
         return "{'status': 0, 'result': '上传成功'}";
