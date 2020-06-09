@@ -1,15 +1,21 @@
-package com.mywebsite.controller.tools;
+package com.mywebsite.tools;
 
 import java.math.BigDecimal;
 
-public class Test {
+public class ArithmeticUtil {
     public static void main(String[] args) {
         float b = 1 / 3;
         float a = 4096 / 54219 * 10000;
         System.out.println(div(4096, 54219));
     }
 
-    //相除
+    /**
+     * 相除
+     *
+     * @param d1
+     * @param d2
+     * @return
+     */
     public static double div(double d1,double d2){
         return div(d1,d2,5);
     }
