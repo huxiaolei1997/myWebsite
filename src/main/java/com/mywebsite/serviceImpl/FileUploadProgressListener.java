@@ -1,7 +1,7 @@
 package com.mywebsite.serviceImpl;
 
 import com.mywebsite.model.Progress;
-import com.mywebsite.controller.tools.Test;
+import com.mywebsite.tools.ArithmeticUtil;
 import org.apache.commons.fileupload.ProgressListener;
 import org.springframework.stereotype.Component;
 
@@ -12,8 +12,8 @@ import javax.servlet.http.HttpSession;
 public class FileUploadProgressListener implements ProgressListener {
     private HttpSession session;
 
-    public void setSession(HttpSession session){
-        this.session=session;
+    public void setSession(HttpSession session) {
+        this.session = session;
         Progress status = new Progress();
         session.setAttribute("status", status);
     }
@@ -24,7 +24,7 @@ public class FileUploadProgressListener implements ProgressListener {
         status.setpBytesRead(pBytesRead);
         status.setpContentLength(pContentLength);
         status.setpItems(pItems);
-        status.setpRate(Test.div(pBytesRead * 100, pContentLength));
+        status.setpRate(ArithmeticUtil.div(pBytesRead * 100, pContentLength));
         System.out.println(status.toString());
     }
 }
