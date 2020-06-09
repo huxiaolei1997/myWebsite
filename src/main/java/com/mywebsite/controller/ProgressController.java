@@ -15,6 +15,7 @@ public class ProgressController {
         Progress status = (Progress) session.getAttribute("status");
         //System.out.println("controller:" + status.toString());
         if(status == null){
+            status = new Progress();
             status.setpRate(0.0);
             return status;
         }
